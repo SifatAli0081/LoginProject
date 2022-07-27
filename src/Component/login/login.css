@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    justify-content: center;
+}
+.section{
+    align-items: center;
+    justify-content: center;
+}
+.from{
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+    margin-top: 140px;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+.col-1{
+    text-align: left;
+    margin-right: 410px;
+    justify-content: center;
+}
+.col-2 {
+    text-align: right;
+    margin-top: 20px;
+    justify-content: center;
+  
+    
+}
+.col-2 .from .input{
+    height: 300px;
+    width: 350px;
+    justify-content: center;
+}
+.header-btn {
+    background-color: transparent;
+    text-decoration: none;
+    color: red;
+    border: 1px solid red;
+    padding: 12px 34px;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.header-btn:hover {
+    border: 1px solid black;
+    background: black;
+    transition: 0.5s;
+    color: white;
+}
