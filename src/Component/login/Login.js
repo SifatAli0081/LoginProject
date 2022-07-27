@@ -44,11 +44,16 @@ const Login = () => {
     <div className="container"> 
     <div className="row" style={{border:"1px solid black"}}>
      <div className="col-1">
-       <img src="https://i.ibb.co/gWF4gbc/typewriter-498204-1920.jpg" className="fluid" alt="typewriter" style={{hight:"500px",width:"500px"}}/>
+       <img src="https://i.ibb.co/gWF4gbc/typewriter-498204-1920.jpg"  alt="typewriter" style={{hight:"500px",width:"500px"}}/>
      </div>
      <div className="col-2 d-flex flex-column align-items-center justify-content-center" style={{hight:"500px",width:"500px"}}>
+     {
+      user.email && <>
+        <h6><b className="text-primary">{user.name}</b> is login</h6>
+      </>
+      }
      <h1>Express</h1>
-     <h4>Sing into your account</h4>
+     <h5>Login into your account.</h5>
      <from className="from-row" style={{alignContent:"center"}}>
       <div className="">
          <div className="col-log-7">
@@ -60,25 +65,18 @@ const Login = () => {
         <input type="password" placeholder="Password" className="form-control my-3 p-2"/>
       </div>
       </div>
-      <div className="from-row" >
-      <button className="header-btn" style={{alignContent:"center"}}>Login</button>
+      <div className="from-row">
+      <button className="header-btn">Login</button>
       <hr/>
-
          <div className="col-log-7">
          {
       user.email ? <button className="header-btn" onClick={handleGoogleSingOut}>Log Out From Google</button> :
       <button className="header-btn"  onClick={handleGoogleSingIn}>Login With Google</button>
      }
-     <br/>
-     {
-      user.email && <>
-        <h1>{user.name}</h1>
-      </>
-      }
          </div>
       </div>
       <br/>
-      <a href='#'>Forget Password ?</a>
+      <a href='#' style={{alignContent:"center"}}>Forget Password ?</a>
       <div className="social-media">
       </div>
      </from>
